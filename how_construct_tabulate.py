@@ -16,7 +16,7 @@ def how_construct_tabulate(target_word: str, words: List[str]) -> List[List[str]
                 else:
                     in_index: List[str] = deepcopy(how_construct[index])
                     in_index.append(word)
-                    how_construct[index + len(word)].extend([in_index])
+                    how_construct[index + len(word)] = (in_index)
     return how_construct[len(target_word)]
 
 
